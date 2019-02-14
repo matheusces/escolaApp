@@ -1,0 +1,30 @@
+<form ng-controller="listarAvaliacaoMediaCtrl">
+    <div class="box">
+        <div class="form-group">
+            <label for="nome">
+                Código:
+            </label>
+            <input class="form-control" type="text" name="codEscola" ng-model="codEscola" placeholder="Digite o Código" />
+        </div>
+
+        <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="listarAvaliacaoMedia(codEscola)">
+            Pesquisar
+        </button>
+    </div>
+
+    <!-- Tabela da Escola -->
+    <div class="box">
+        <table class="table table-hover">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Média</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">{{avaliacaoMedia.media}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</form>

@@ -1,0 +1,23 @@
+<form ng-controller="listarTipoAvaliacaoCtrl">
+    <!-- Tabela de Escolas -->
+    <div class="box">
+        <table class="table table-hover">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Código</th>
+                    <th scope="col">Nome</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="avaliacao in avaliacoes">
+                    <td scope="row">{{avaliacao.cod}}</td>
+                    <td scope="row">{{avaliacao.nome}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="listarTipoAvaliacao()">
+        Listar
+    </button>
+</form>

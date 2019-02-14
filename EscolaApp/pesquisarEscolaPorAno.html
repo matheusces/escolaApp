@@ -1,0 +1,43 @@
+ <form ng-controller="pesquisarEscolaPorAnoCtrl">
+  <div class="box">
+      <div class="form-group">
+          <label for="nome">
+              Código:
+          </label>
+          <input class="form-control" type="text" name="codEscola" ng-model="codEscola" placeholder="Digite o código" />
+
+          <label for="nomeAno">
+            Ano:
+          </label>
+          <input class="form-control" type="text" name="anoEscola" ng-model="anoEscola" placeholder="Digite o ano">
+      </div>
+
+      <button type="button" class="btn btn-primary btn-lg btn-block"
+        ng-click="pesquisarEscolaPorAno(codEscola, anoEscola)">
+          Pesquisar
+      </button>
+  </div>
+
+  <!-- Tabela da Escola -->
+  <div class="box">
+      <table class="table table-hover">
+          <thead class="thead-light">
+              <tr>
+                  <th scope="col">Código</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Ano</th>
+                  <th scope="col">Valor</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr ng-repeat="escola in escolas">
+                  <td scope="row">{{escola.tipoAvaliacao.cod}}</td>
+                  <td scope="row">{{escola.tipoAvaliacao.nome}}</td>
+                  <td scope="row">{{escola.ano}}</td>
+                  <td scope="row">{{escola.valor}}</td>
+
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</form>
